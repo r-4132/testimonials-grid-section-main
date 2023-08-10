@@ -1,5 +1,5 @@
 body{
-    background-color: hsl(0, 0%, 81%);
+    background-color: #EDF2F8;
     font-family: 'Barlow Semi Condensed', sans-serif;;
 }
 .container{
@@ -11,6 +11,7 @@ body{
     gap: 20px;
 }
 .item{
+    box-shadow: 15px 25px 25px #D6DBE0;
     background-color: white;
     padding: 30px;
     border-radius: 10px;
@@ -79,8 +80,6 @@ p{
     font-size: 11.4px;
     opacity: .4;
     line-height: 1.1rem;
-
-
 }
 
 h3{
@@ -89,3 +88,30 @@ h3{
     text-align: left;
 }
 
+@media only screen and (max-width: 375px) {
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        
+    }
+    
+    .item:nth-of-type(1),
+    .item:nth-of-type(2),
+    .item:nth-of-type(3),
+    .item:nth-of-type(4),
+    .item:nth-of-type(5){
+        grid-column: auto;
+        grid-row: auto;
+        grid-column-start: auto;
+    }
+    h3{
+        font-size: 16.5px;
+    }
+    p{
+        font-size: 12.4px;
+    }
+
+    .item:nth-of-type(1){ 
+        background-position: top right 15px;
+    }
+}
